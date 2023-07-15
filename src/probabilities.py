@@ -119,6 +119,6 @@ while len(powerball_probabilities) != 0:
 file_lines.append(f"\n\nSum of Probabilities (Powerball): {powerball_probability_sum}")
 
 #Write the file:
-f = open("/Users/edwardferrari/MyPythonProjects/MachineLearning/PyTorch/Lottery/parsed_data.txt", 'w')
+f = open(parsed_data_save_path, 'w')
 f.writelines(file_lines)
 f.close()
