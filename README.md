@@ -134,7 +134,7 @@ Sum of Probabilities (Powerball): 100.00000000000001
 7. The numbers are then associated and ordered in order from greatest to least with a number and their matching probabily. So, the numbers at the top are the most probable.
 
 ## User Notice
-- I am not responsible for any damage cuased by the data above.
+- I am not responsible for any damage caused by the data above.
 - The data is not used for any reason to cause a question towards Powerball and their reputation, concerning bias in their numbers, but it can of course be of use to you if you are researching such a topic ;)
 
 ## Credits:
