@@ -136,7 +136,8 @@ Sum of Probabilities (Powerball): 100.00000000000001
 ## User Notice
 - I am not responsible for any damage cuased by the data above.
 - The data is not used for any reason to cause a question towards Powerball and their reputation, concerning bias in their numbers, but it can of course be of use to you if you are researching such a topic ;)
-##Credits:
+
+## Credits:
 
 
  - https://catalog.data.gov/dataset/lottery-powerball-winning-numbers-beginning-2010 Thank you State of New York for the data, very helpful!
