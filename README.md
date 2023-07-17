@@ -5,7 +5,7 @@
 
 ## Update:
 
-Please note that initial release contained wrong information. I had fogotten to filter out certain results before/after some reformatting Powerball had made on their numbers. Now, all numbers before October 4, 2015 are filtered out, as on that date, Powerball changed their ranges from 1-59 to 1-69 for the normal white balls, and 1-35 to 1-26 for the Powerball. I had forgotten to filter out those before the specific date, leading to incorrect (biased) probabilities. The below information is correct, though, and it is based on the data taken from October (7th), 2015, up until present day. Apologies for the inconvenience.
+Please note that initial release contained wrong information. I had fogotten to filter out certain results before/after some reformatting Powerball had made on their numbers. Now, all numbers before October 4, 2015 are filtered out, as on that date, Powerball changed their ranges from 1-59 to 1-69 for the normal white balls, and 1-35 to 1-26 for the Powerball. I had forgotten to filter out those before the specific date, leading to incorrect (biased) probabilities. The below information is correct, though, and it is based on the data taken from October (7th, the first ticket after format changes), 2015, up until present day. Apologies for the inconvenience.
 
 ## Usage
 
