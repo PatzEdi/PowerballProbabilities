@@ -106,7 +106,7 @@ print(f"\nSum of Probabilities (Numbers): {probability_sum}")
 #Now, print a list in order of probabilities (Greatest to least)
 
 #File lines to append to:
-file_lines = ["Lottery Number Probabilities from 2010 to 2023 (Greatest to Least Probabilities)"]
+file_lines = ["Lottery Number Probabilities from 2010 to 2023 (Greatest to Least Probabilities) (Filtered October 4th, 2015 and Up: Format Changes)"]
 
 while len(probabilities) != 0:
     iterator = 0

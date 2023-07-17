@@ -9,7 +9,7 @@ Please note that initial release contained wrong information. I had fogotten to 
 
 ## Usage
 
-This project can be used to determine the probabilites of each number through the past decade or so of powerball winning ticket extractions.
+This project can be used to determine the probabilites of each number through the past decade or so of powerball winning ticket extractions. Note that the probabilities are extracted from October 4th, 2015 and up due to format changes. More information on that above.
 
 You can enter the path in the variable **lottery_dataset_path** that leads to the lottery.txt file, which can be downloaded from [here](https://catalog.data.gov/dataset/lottery-powerball-winning-numbers-beginning-2010). Download the csv, and change the extension from csv to txt.
 
@@ -20,7 +20,7 @@ Run the script. The outputted file will contain something like this:
 
 ```
 
-Lottery Number Probabilities from 2010 to 2023 (Greatest to Least Probabilities)
+Lottery Number Probabilities from 2010 to 2023 (Greatest to Least Probabilities) (Filtered October 4th, 2015 and Up: Format Changes)
 Number: 61 , Probability: 1.9469026548672566
 Number: 32 , Probability: 1.8805309734513276
 Number: 21 , Probability: 1.836283185840708
