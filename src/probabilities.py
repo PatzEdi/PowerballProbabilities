@@ -25,20 +25,64 @@ def findNumbers(line):
     pattern = r"(?<=,)(\d+\s\d+\s\d+\s\d+\s\d+\s\d+)(?=,)"
     matches = re.findall(pattern, line)
     return matches
+
+
+def find_numbers_in_date(line):
+    #Used to filter results and only gather data from 2015 and up (format changes)
+    
+    # Regular expression pattern to match dates in the format YYYY-MM-DD or DD/MM/YYYY
+    pattern = r"\b\d{4}-\d{2}-\d{2}\b|\b\d{2}/\d{2}/\d{4}\b"
+    # Find the date:
+    found = re.findall(pattern, line)
+    date = found[0]
+
+    pattern = r"\d+"
+    numbers = re.findall(pattern, date)
+
+    i = 0
+    for number in numbers:
+        numbers[i] = int(number)
+        i += 1
+
+    month = numbers[0]
+    day = numbers[1]
+    year = numbers[2]
+
+    return month, day, year
+
+
 #For line in data, gather the number sequences:
 for line in data:
-    try:
-        #Get the numbers:
-        numbersList = findNumbers(line)[0].split(' ')
-        #Convert to integers:
-        for element in range(len(numbersList)): numbersList[element] = int(numbersList[element])
-        #Append the powerball numbers (Check if powerball is equal to or less than 26 to follow present day format)
-        if numbersList[-1] < 27:
+    month, day, year = find_numbers_in_date(line)
+
+    filtered = False
+    if year == 2015:
+        if month > 10:
+            filtered = False
+        if month < 10:
+            filtered = True
+        elif month == 10:
+            if day >= 7:
+                filtered = False
+            elif day <= 7:
+                filtered = True
+    #Skip all years that are before 2015:
+    elif year < 2015:
+        filtered = True
+    
+    if filtered == False:
+        try:
+            #Get the numbers:
+            numbersList = findNumbers(line)[0].split(' ')
+            #Convert to integers:
+            for element in range(len(numbersList)): numbersList[element] = int(numbersList[element])
+            #Append the powerball numbers (Check if powerball is equal to or less than 26 to follow present day format)
             total_powerball_numbers.append(numbersList[-1])
-        numbersList.pop(-1)
-        total_normal_numbers.extend(numbersList)
-    except:
-        pass
+            #Filter the first 5 numbers (in order to avoid bias) that were extracted from October 4, 2015 and up (Format changes from 59 to 69 5 normal numbers, 35 to 26 Powerball range.
+            numbersList.pop(-1)
+            total_normal_numbers.extend(numbersList)
+        except:
+            pass
     
 number_vocab_normal = number_vocab(total_normal_numbers)
 
@@ -122,3 +166,5 @@ file_lines.append(f"\n\nSum of Probabilities (Powerball): {powerball_probability
 f = open(parsed_data_save_path, 'w')
 f.writelines(file_lines)
 f.close()
+
+#IMPORTANT Note: Only gather data from 2015 and above (format changes!) (fixed)
