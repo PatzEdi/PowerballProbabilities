@@ -1,6 +1,7 @@
 # PowerballProbabilities
  Powerball Lottery Data Probability loader and Parser written in Python
 
+**Thank you Ac31415 for starring the repository!**
 
 ## Usage
 
@@ -130,7 +131,7 @@ Sum of Probabilities (Powerball): 100.00000000000001
 3. Appends each number from the two categories to get a list of all numbers put together (used later on to count probability).
 4. Creates a vocab for each of the lists containing all numbers (one for the normal 5 numbers, one for powerball numbers), by using **set** on the lists.
 5. Iterates through each number in the vocab (first, for the first 5 numbers), and for each number, iterates through each number in the total numbers list. If the integer iterated through the total numbers list is equal to the number in the vocab, a count adds 1.
-6. Probability is calculated by dividing the total number amount by the counter.
+6. Probability is calculated by dividing the counter by the total number amount.
 7. The numbers are then associated and ordered in order from greatest to least with a number and their matching probabily. So, the numbers at the top are the most probable.
 
 ## User Notice
