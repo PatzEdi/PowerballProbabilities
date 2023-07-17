@@ -1,7 +1,7 @@
 # PowerballProbabilities
  Powerball Lottery Data Probability loader and Parser written in Python
 
-**Thank you Ac31415 for starring the repository!**
+**Thank you [Ac31415]((https://github.com/Ac31415)) and [kmayakova](https://github.com/Ac31415) for starring the repository!**
 
 ## Update:
 
